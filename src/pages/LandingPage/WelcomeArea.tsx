@@ -9,6 +9,7 @@ const WelcomeAreaContent = () => {
         <div class={stack({
             ml: '27%',
             mt: '25%',
+            w: '70%',
         })}>
             <a href='https://runcodes.icmc.usp.br/' class={css({})}>
                 <img src={logo} alt='Runcodes logo' />

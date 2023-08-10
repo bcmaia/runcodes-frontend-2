@@ -1,4 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
+import "@fontsource/raleway";
 
 export default defineConfig({
     // Whether to use css reset
@@ -12,7 +13,13 @@ export default defineConfig({
 
     // Useful for theme customization
     theme: {
-        extend: {},
+        extend: {
+            tokens: {
+                fonts: {
+                    raleway: {value: 'var(--font-raleway), sans-serif'},
+                }
+            },
+        },
     },
 
     jsxFramework: "solid",

@@ -1,0 +1,9 @@
+@layer reset, base, tokens, recipes, utilities;
+
+/* This id is used in a div that serves as the main background. */
+/* NOTE: I could not make pandacss apply this background image, so i resorted
+    to using this id.
+*/
+#main-bg-image {
+    background-image: url(assets/images/login2back.jpg);
+}

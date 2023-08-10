@@ -1,0 +1,4 @@
+#LandingPage {
+    background-image: url(../assets/images/login2back.jpg);
+    background-size: cover; /* This ensures the image covers the available space */
+}

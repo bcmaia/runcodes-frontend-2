@@ -1,6 +1,9 @@
 import { css } from "../styled-system/css";
 import { Router, Route, Routes } from "@solidjs/router";
 
+// # FONTS
+import '@fontsource/raleway';
+
 // # PAGES
 import LandingPage from "./pages/LandingPage";
 

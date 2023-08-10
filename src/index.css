@@ -7,3 +7,7 @@
 #main-bg-image {
     background-image: url(assets/images/login2back.jpg);
 }
+
+body {
+    font-family: 'Raleway', sans-serif;
+}

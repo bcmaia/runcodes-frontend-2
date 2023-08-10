@@ -5,6 +5,7 @@ import '../index.css';
 import LoginArea from "./LandingPage/LoginArea";
 import WelcomeArea from "./LandingPage/WelcomeArea";
 
+
 const LandingPage = () => {
     return (
         <div id='main-bg-image' class={css({

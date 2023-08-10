@@ -10,6 +10,7 @@ const WelcomeAreaContent = () => {
             ml: '27%',
             mt: '25%',
             w: '70%',
+            fontFamily: 'raleway',
         })}>
             <a href='https://runcodes.icmc.usp.br/' class={css({})}>
                 <img src={logo} alt='Runcodes logo' />

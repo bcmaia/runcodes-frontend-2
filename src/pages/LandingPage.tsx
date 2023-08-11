@@ -1,10 +1,9 @@
-import { css } from "../../styled-system/css";
-import { Flex } from "../../styled-system/jsx";
-import { flex } from "../../styled-system/patterns";
+import { css } from '../../styled-system/css';
+import { Flex } from '../../styled-system/jsx';
+import { flex } from '../../styled-system/patterns';
 import '../index.css';
-import LoginArea from "./LandingPage/LoginArea";
-import WelcomeArea from "./LandingPage/WelcomeArea";
-
+import LoginArea from './LandingPage/LoginArea';
+import WelcomeArea from './LandingPage/WelcomeArea';
 
 const LandingPage = () => {
     return (
@@ -13,8 +12,17 @@ const LandingPage = () => {
             bgRepeat: 'no-repeat',
             height: '100vh',
             width: '100vw',
+
+            bgImage: `url(assets/images/login2back.jpg)`,
+            bgPosition: 'center center',
+            backgroundSize: 'cover',
+            bgAttachment: 'fixed',
+            backgroundRepeat: 'no-repeat',
+
             display: 'flex',
             justifyContent: 'space-between',
+
+            flexDir: {base: 'column', md: 'row'},
         })}>
             <WelcomeArea />
             <LoginArea />

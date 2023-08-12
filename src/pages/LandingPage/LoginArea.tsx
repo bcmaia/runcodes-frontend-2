@@ -9,7 +9,7 @@ const inputClass = css({
     p: "6px 12px",
     mb: "15px",
 
-    fontFamily: "raleway",
+    fontFamily: "face-font",
     fontSize: "14px",
     fontWeight: "400",
     lineHeight: "1.5",
@@ -116,7 +116,7 @@ const LoginForm = () => {
 
             <div
                 class={css({
-                    fontFamily: "raleway",
+                    fontFamily: "face-font",
                     fontSize: "14px",
                     lineHeight: "20px",
                     mt: "5px",
@@ -125,7 +125,7 @@ const LoginForm = () => {
             >
                 <a
                     href=''
-                    class={link({ color: "white", hoverColor: "darkBlue" })}
+                    class={link({ color: "white", hoverColor: "white" })}
                 >
                     Esqueceu sua senha?
                 </a>
@@ -141,15 +141,14 @@ const LoginArea = () => {
                 width: { base: "100%", md: "40%" },
                 height: "100%",
                 bgColor: "rgba(53,68,88,0.8)",
-                p: "3%",
+                p: "2%",
             })}
         >
             <div
                 class={css({
                     mt: { base: "16%", md: "32%" },
                     "@media (max-height: 767px)": { mt: "10%" },
-                    ml: { base: "0", md: "2%" },
-                    w: { base: "100%", md: "98%", lg: "80%", xl: "56.2%" },
+                    w: { base: "100%", md: "98%", lg: "80%", xl: "65%" },
                 })}
             >
                 <LoginForm />

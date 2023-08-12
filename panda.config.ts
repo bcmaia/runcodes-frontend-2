@@ -13,6 +13,12 @@ export default defineConfig({
 
     // Useful for theme customization
     theme: {
+        tokens: {
+            fonts: {
+                'face-font': {value: 'Raleway, sans-serif'},
+                'main-font': {value: "'Open Sans', sans-serif"},
+            },
+        },
         extend: {
             textStyles,
         },

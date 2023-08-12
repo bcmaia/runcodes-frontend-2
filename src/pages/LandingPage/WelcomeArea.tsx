@@ -65,7 +65,7 @@ const WelcomeArea = () => {
             class={css({
                 h: "100%",
                 w: { base: "100%", md: "60%" },
-                p: '3%'
+                p: '2%'
             })}
         >
             <WelcomeAreaContent />

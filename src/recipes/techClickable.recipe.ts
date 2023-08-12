@@ -9,7 +9,7 @@ const techClickable = cva({
         justifyContent: 'center',
         alignItems: 'center',
 
-        fontFamily: 'raleway',
+        fontFamily: 'face-font',
         fontSize: '18px',
         lineHeight: '1.33',
 

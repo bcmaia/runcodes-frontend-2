@@ -5,7 +5,6 @@ export const link = cva({
         cursor: 'pointer',
         _hover: {
             textDecorationLine: 'underline',
-            
         },
     },
     

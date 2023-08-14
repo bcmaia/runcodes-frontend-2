@@ -34,7 +34,6 @@ const RunPanel = (props : {
             <div class={css({
                 w: '100%',
                 textStyle: 'runTextP',
-                bg: 'blue',
                 bgColor: 'rgb(255,255,255)',
                 p: props.padding ?? '10px 15px',
             })}>

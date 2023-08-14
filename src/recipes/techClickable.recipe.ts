@@ -19,6 +19,7 @@ const techClickable = cva({
         p: '10px 16px',
 
         transition: 'all 200ms ease',
+        cursor: 'pointer',
     },
     variants: {
         weight: {
@@ -48,6 +49,7 @@ const techClickable = cva({
         width: {
             fit: {w: 'fit-content'},
             auto: {w: 'auto'},
+            max: {w: '100%'},
         },
     },
     defaultVariants: {

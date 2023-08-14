@@ -2,6 +2,10 @@ import { css } from "../../../styled-system/css";
 import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes";
 import { divider } from "../../../styled-system/patterns";
+import { UserContext, useUserContext } from "../../App";
+import { Accessor, Setter, createEffect, createSignal, useContext } from "solid-js";
+import { fetchUserData } from "../../services/auth";
+import { Navigate, useNavigate } from "@solidjs/router";
 
 const inputClass = css({
     p: "6px 12px",
@@ -28,7 +32,10 @@ const inputClass = css({
     },
 });
 
-const EmailInput = () => {
+const EmailInput = (props: {
+    email: Accessor<string>;
+    setEmail: Setter<string>;
+}) => {
     return (
         <input
             name='data[User][email]'
@@ -38,11 +45,16 @@ const EmailInput = () => {
             id='UserEmail'
             required={true}
             class={inputClass}
+            value={props.email()}
+            onInput={(e) => props.setEmail(e.target.value)}
         />
     );
 };
 
-const PasswordInput = () => {
+const PasswordInput = (props: {
+    password: Accessor<string>;
+    setPassword: Setter<string>;
+}) => {
     return (
         <input
             name='data[User][password]'
@@ -50,21 +62,48 @@ const PasswordInput = () => {
             type='password'
             id='UserPassword'
             required={true}
-            data-dashlane-rid='06f2e493039b21e0'
             class={inputClass}
+            value={props.password()}
+            onInput={(e) => props.setPassword(e.target.value)}
         />
     );
 };
 
 const LoginForm = () => {
+    // Signals
+    const [authErr, setAuthErr] = createSignal(""); // TODO: Display error message
+    const [email, setEmail] = createSignal("");
+    const [password, setPassword] = createSignal("");
+
+    // Hooks
+    const userCtx = useContext(UserContext); 
+    const navigate = useNavigate();
+
+    // Effects
+    createEffect(() => {
+        if (userCtx?.user?.isLoggedIn) navigate('/home');
+    });
+
+    // Submit function
+    const handleSubmit = (event: any) => {
+        event.preventDefault();
+
+        setAuthErr("");
+
+        fetchUserData(email(), password())
+            .then((userData) => {
+                if (undefined === userCtx) throw Error('User context is undefined');
+                userCtx?.setUser("userData", userData);
+                userCtx?.setUser("isLoggedIn", true);
+            })
+            .catch((err) => setAuthErr(err.toString()));
+
+        setPassword("");
+    };
+
+    // UI
     return (
-        <form
-            action='/'
-            id='UserLoginForm'
-            method='post'
-            accept-charset='utf-8'
-            data-form-type='login'
-        >
+        <form id='UserLoginForm' accept-charset='utf-8' onSubmit={handleSubmit}>
             <div
                 class={techClickable({
                     color: "white",
@@ -98,19 +137,20 @@ const LoginForm = () => {
                 Já estou cadastrado
             </h3>
 
-            <EmailInput />
+            <EmailInput email={email} setEmail={setEmail} />
 
-            <PasswordInput />
+            <PasswordInput password={password} setPassword={setPassword} />
 
-            <div
+            <button
+                type="submit"
                 class={techClickable({
                     color: "white",
                     weight: "extralight",
-                    width: "auto",
+                    width: "max",
                 })}
             >
-                <a href='#'> login </a>
-            </div>
+                login
+            </button>
 
             <div
                 class={css({

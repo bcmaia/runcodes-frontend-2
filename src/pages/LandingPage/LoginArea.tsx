@@ -1,9 +1,7 @@
 import { css } from "../../../styled-system/css";
 import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes";
-import { Divider } from "../../../styled-system/jsx";
 import { divider } from "../../../styled-system/patterns";
-// import './LoginArea.css';
 
 const inputClass = css({
     p: "6px 12px",

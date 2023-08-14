@@ -46,8 +46,8 @@ const techClickable = cva({
             },
         },
         width: {
-            fit: {width: 'fit'},
-            auto: {width: 'auto'},
+            fit: {w: 'fit-content'},
+            auto: {w: 'auto'},
         },
     },
     defaultVariants: {

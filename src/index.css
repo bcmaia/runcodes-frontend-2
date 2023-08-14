@@ -1,2 +1,11 @@
 @layer reset, base, tokens, recipes, utilities;
 
+body {
+    background-color: rgb(220,220,220);
+    color: rgb(51, 51, 51);
+    min-width: 400px;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}

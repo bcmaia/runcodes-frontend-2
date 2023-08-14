@@ -28,7 +28,7 @@ const textStyles = defineTextStyles({
         description: "Use this to make a simple title inside the run codes app",
         value: {
             fontFamily: "main-font",
-            fontWeight: "500",
+            fontWeight: "600",
             fontSize: "16px",
             letterSpacing: "0",
             lineHeight: "1.1",
@@ -40,7 +40,7 @@ const textStyles = defineTextStyles({
             "Use this to make a simple paragraph inside the run codes app",
         value: {
             fontFamily: "main-font",
-            fontWeight: "400",
+            fontWeight: "600",
             fontSize: "12px",
             lineHeight: "17.15px",
             letterSpacing: "0",

@@ -6,6 +6,7 @@ const RunPanel = (props : {
     title?: string, 
     children?: JSXElement, 
     width?: string, 
+    padding?: string,
     margin?: string,
 }) => {
     const c = children(() => props.children ?? (<></>));
@@ -13,13 +14,15 @@ const RunPanel = (props : {
         <div class={css({
             w: props.width ?? 'auto',
             m: props.margin ?? '0',
+            h: 'fit-content',
+            boxShadow: '1px 1px 1px rgba(0,0,0,.05)',
         })}>
 
             <div class={css({
                 w: '100%',
                 p: '10px 15px',
                 bgColor: 'rgb(244,244,244)',
-                p: '10px 15px',
+                borderBottom: 'solid 1px lightgray'
             })}> 
                 <h3 class={css({
                     textStyle: 'runTextH3',
@@ -33,7 +36,7 @@ const RunPanel = (props : {
                 textStyle: 'runTextP',
                 bg: 'blue',
                 bgColor: 'rgb(255,255,255)',
-                p: '10px 15px',
+                p: props.padding ?? '10px 15px',
             })}>
                 {c()}
             </div>

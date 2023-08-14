@@ -9,13 +9,13 @@ const WelcomeAreaContent = () => {
         <div
             class={stack({
                 w: "100%",
-                
+
                 md: { ml: "2%", w: "96%" },
                 lg: { ml: "13%", w: "85%" },
                 xl: { ml: "27%", w: "70%" },
 
                 mt: "25%",
-                '@media (max-height: 767px)': {mt: "10%"},
+                "@media (max-height: 767px)": { mt: "10%" },
             })}
         >
             <a href='https://runcodes.icmc.usp.br/' class={css({})}>
@@ -34,13 +34,11 @@ const WelcomeAreaContent = () => {
                 como C/C++, Python, Java, Fortran, dentre outras.
             </p>
 
-            <a
-                href='https://icmc.usp.br/'
-                target='_blank'
-                class={techClickable()}
-            >
-                conheça mais sobre o icmc
-            </a>
+            <div class={techClickable({ width: "fit" })}>
+                <a href='https://icmc.usp.br/' target='_blank'>
+                    conheça mais sobre o icmc
+                </a>
+            </div>
 
             {/* TODO: Add pop-up */}
             <p
@@ -65,7 +63,7 @@ const WelcomeArea = () => {
             class={css({
                 h: "100%",
                 w: { base: "100%", md: "60%" },
-                p: '2%'
+                p: "2%",
             })}
         >
             <WelcomeAreaContent />

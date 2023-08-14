@@ -1,6 +1,4 @@
 import { css } from '../../styled-system/css';
-import { Flex } from '../../styled-system/jsx';
-import { flex } from '../../styled-system/patterns';
 import '../index.css';
 import LoginArea from './LandingPage/LoginArea';
 import WelcomeArea from './LandingPage/WelcomeArea';

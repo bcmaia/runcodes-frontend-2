@@ -1,10 +1,14 @@
+import { createSignal } from "solid-js";
 import { css } from "../../../styled-system/css";
 import { stack } from "../../../styled-system/patterns";
 import logo from "../../assets/logos/logoblue.png";
 import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes";
+import FirstModal from "../../shared/FirstModal";
 
 const WelcomeAreaContent = () => {
+    const [open, setOpen] = createSignal(false);
+
     return (
         <div
             class={stack({
@@ -18,6 +22,8 @@ const WelcomeAreaContent = () => {
                 "@media (max-height: 767px)": { mt: "10%" },
             })}
         >
+            <FirstModal open={open()} onClose={() => setOpen(false)}/>
+
             <a href='https://runcodes.icmc.usp.br/' class={css({})}>
                 <img src={logo} alt='Runcodes logo' />
             </a>
@@ -48,10 +54,10 @@ const WelcomeAreaContent = () => {
                 })}
             >
                 Ao navegar no run.codes você concorda com os{" "}
-                <a href='#' class={link()}>
+                <button class={link()} onclick={() => setOpen(true)}>
                     {" "}
                     Termos de Uso{" "}
-                </a>
+                </button>
             </p>
         </div>
     );

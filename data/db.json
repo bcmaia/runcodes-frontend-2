@@ -8,6 +8,13 @@
             "subjects": [1, 2]
         },
         {
+            "id": "ademiro@gmail.com",
+            "password": "admin123",
+            "university": "University A",
+            "role": "student",
+            "subjects": [1, 2]
+        },
+        {
             "id": "user2",
             "password": "password2",
             "university": "University B",

@@ -1,3 +1,13 @@
+/**
+ * index.css
+ * -----------------------------------------------------------------------------
+ * This file, `index.css`, is responsible for defining basic CSS styles and 
+ * configurations for our web application. It also includes the setup for the
+ * Pandacss framework. It's recommended to AVOID MAKING DIRECT CHANGES TO
+ * THIS FILE unless you have a clear understanding of its impact.
+ * -----------------------------------------------------------------------------
+ */
+
 @layer reset, base, tokens, recipes, utilities;
 
 body {

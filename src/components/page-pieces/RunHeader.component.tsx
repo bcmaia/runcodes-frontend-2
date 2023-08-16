@@ -1,11 +1,11 @@
-import { css } from "../../styled-system/css";
-import logo from "../assets/logos/logowhite.png";
+import { css } from "../../../styled-system/css";
+import logo from "../../assets/logos/logowhite.png";
 import { JSXElement } from "solid-js";
-import { hstack, square } from "../../styled-system/patterns";
+import { hstack, square } from "../../../styled-system/patterns";
 import { A } from "@solidjs/router";
 
-import mojoDojoCasaHouseIcon from "../assets/icons/mojo-dojo-casa-house.svg";
-import moreArrowsDown from "../assets/icons/more-arrows-down.svg";
+import mojoDojoCasaHouseIcon from "../../assets/icons/mojo-dojo-casa-house.svg";
+import moreArrowsDown from "../../assets/icons/more-arrows-down.svg";
 
 // # CONSTANTS
 const HEADER_HEIGHT = "51px";

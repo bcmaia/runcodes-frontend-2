@@ -1,6 +1,6 @@
 import { css } from "../../../styled-system/css";
 import techClickable from "../../recipes/techClickable.recipe";
-import { link } from "../../recipes/text-recipes";
+import { link } from "../../recipes/text-recipes.recipes";
 import { divider } from "../../../styled-system/patterns";
 import { UserContext } from "../../App";
 import { Accessor, Setter, createEffect, createSignal, useContext } from "solid-js";
@@ -71,7 +71,7 @@ const PasswordInput = (props: {
 
 const LoginForm = () => {
     // Signals
-    const [authErr, setAuthErr] = createSignal(""); // TODO: Display error message
+    const [/* authErr */, setAuthErr] = createSignal(""); // TODO: Display error message
     const [email, setEmail] = createSignal("");
     const [password, setPassword] = createSignal("");
 

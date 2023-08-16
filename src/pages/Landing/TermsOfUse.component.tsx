@@ -1,6 +1,6 @@
 import { Accessor } from "solid-js";
 import { css } from "../../../styled-system/css";
-import FirstModal from "./FirstModal";
+import FirstModal from "./FirstModal.component";
 import { divider } from "../../../styled-system/patterns";
 import techClickable from "../../recipes/techClickable.recipe";
 

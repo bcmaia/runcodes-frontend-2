@@ -1,0 +1,10 @@
+{
+    "out": "docs",                  // Output directory for generated documentation
+    "entryPoints": ["src"],         // Entry points for documentation generation (adjust as needed)
+    "exclude": ["**/node_modules/**"],  // Exclude certain directories from documentation
+    "theme": "default",             // Use the default theme (can be customized)
+    "name": "runcodes-frontend-v2",     // Project name displayed in documentation
+    "excludeExternals": false,      // Exclude external dependencies from documentation
+    "excludePrivate": false,        // Exclude private members from documentation
+    "excludeProtected": false       // Exclude protected members from documentation
+}

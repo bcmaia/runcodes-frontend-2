@@ -1,7 +1,7 @@
 import { css } from '../../styled-system/css';
 import '../index.css';
-import LoginArea from './LandingPage.components/LoginArea';
-import WelcomeArea from './LandingPage.components/WelcomeArea';
+import LoginArea from './Landing/LoginArea.component';
+import WelcomeArea from './Landing/WelcomeArea.component';
 
 const LandingPage = () => {
 

@@ -1,12 +1,10 @@
-import { Accessor, createSignal } from "solid-js";
+import { createSignal } from "solid-js";
 import { css } from "../../../styled-system/css";
-import { divider, stack } from "../../../styled-system/patterns";
+import { stack } from "../../../styled-system/patterns";
 import logo from "../../assets/logos/logoblue.png";
 import techClickable from "../../recipes/techClickable.recipe";
-import { link } from "../../recipes/text-recipes";
-import FirstModal from "./FirstModal";
-import { styled } from "../../../styled-system/jsx";
-import TermsOfUse from "./TermsOfUse";
+import { link } from "../../recipes/text-recipes.recipes";
+import TermsOfUse from "./TermsOfUse.component";
 
 
 

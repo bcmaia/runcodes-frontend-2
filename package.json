@@ -9,7 +9,10 @@
         "build": "panda codegen && tsc && vite build",
         "preview": "vite preview",
         "test-server": "json-server --watch data/db.json --port 8000",
-        "genstyle": "panda codegen"
+        "genstyle": "panda codegen",
+        "doc": "typedoc",
+        "clear": "rm -fr node_modules/ styled-system/ docs/",
+        "fresh": "clear && npm run clear && npm i && npm run doc && npm run dev"
     },
     "dependencies": {
         "@fontsource/open-sans": "^5.0.8",
@@ -21,6 +24,7 @@
     "devDependencies": {
         "@pandacss/dev": "^0.10.0",
         "json-server": "^0.17.3",
+        "typedoc": "^0.24.8",
         "typescript": "^5.0.2",
         "vite": "^4.4.5",
         "vite-plugin-solid": "^2.7.0"

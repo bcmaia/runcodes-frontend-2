@@ -1,4 +1,4 @@
-import { Accessor, JSXElement, Show, children } from "solid-js";
+import { Accessor, JSXElement, children } from "solid-js";
 import { css } from "../../../styled-system/css";
 import { Transition } from "solid-transition-group";
 

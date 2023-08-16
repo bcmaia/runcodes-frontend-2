@@ -1,5 +1,6 @@
 ## Usage
 
+### Setup
 ```bash
 $ npm install # or pnpm install or yarn install
 ```
@@ -7,13 +8,20 @@ $ npm install # or pnpm install or yarn install
 ### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm run dev`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+### `npm run test-server`
+Runs a json-server backend that can be used to quickly test the frontend.
+ Use this in a second terminal along side `npm run dev` to effectively test the 
+ app.
+
+### `npm run doc`
+Creates documentation for the project.
 
 ### `npm run build`
 

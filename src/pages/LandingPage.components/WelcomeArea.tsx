@@ -1,10 +1,14 @@
-import { createSignal } from "solid-js";
+import { Accessor, createSignal } from "solid-js";
 import { css } from "../../../styled-system/css";
-import { stack } from "../../../styled-system/patterns";
+import { divider, stack } from "../../../styled-system/patterns";
 import logo from "../../assets/logos/logoblue.png";
 import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes";
-import FirstModal from "../../shared/FirstModal";
+import FirstModal from "./FirstModal";
+import { styled } from "../../../styled-system/jsx";
+import TermsOfUse from "./TermsOfUse";
+
+
 
 const WelcomeAreaContent = () => {
     const [open, setOpen] = createSignal(false);
@@ -22,17 +26,17 @@ const WelcomeAreaContent = () => {
                 "@media (max-height: 767px)": { mt: "10%" },
             })}
         >
-            <FirstModal open={open()} onClose={() => setOpen(false)}/>
+            <TermsOfUse open={open} onClose={() => setOpen(false)} />
 
             <a href='https://runcodes.icmc.usp.br/' class={css({})}>
                 <img src={logo} alt='Runcodes logo' />
             </a>
 
-            <h5 class={css({ textStyle: "lightTouch" })}>ICMC</h5>
+            <h5 class={css({ textStyle: "landingLightTouch" })}>ICMC</h5>
 
             <p
                 class={css({
-                    textStyle: "bodyStrong",
+                    textStyle: "landingBodyStrong",
                 })}
             >
                 run.codes é um sistema de submissão e correção automática de
@@ -49,7 +53,7 @@ const WelcomeAreaContent = () => {
             {/* TODO: Add pop-up */}
             <p
                 class={css({
-                    textStyle: "bodyStrong",
+                    textStyle: "landingBodyStrong",
                     mt: "10px",
                 })}
             >

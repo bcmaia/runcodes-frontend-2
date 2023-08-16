@@ -1,5 +1,6 @@
 import { Router, Route, Routes } from "@solidjs/router";
 import { createContext, lazy, useContext } from "solid-js";
+import { SetStoreFunction, createStore } from "solid-js/store";
 
 // # FONTS
 import "@fontsource/raleway";
@@ -14,10 +15,9 @@ import "@fontsource/open-sans/600.css";
 
 // # PAGES
 import Layout from "./Layout";
-import LandingPage from "./pages/LandingPage";
-import HomePage from "./pages/HomePage";
-import { SetStoreFunction, createStore } from "solid-js/store";
-const MyOferringsPage = lazy(() => import('./pages/MyOferringsPage'));
+import LandingPage from "./pages/Landing.page.tsx";
+import HomePage from "./pages/Home.page.tsx";
+const MyOferringsPage = lazy(() => import('./pages/MyOferrings.page.tsx'));
 
 type userStoreType = {isLoggedIn : boolean, userData : any};
 type userContextType = {user: userStoreType, setUser: SetStoreFunction<userStoreType>};

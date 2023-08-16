@@ -1,6 +1,6 @@
 import { For, createSignal } from "solid-js";
 import { css } from "../../styled-system/css";
-import RunPanel from "../shared/RunPanel";
+import RunPanel from "../components/RunPanel";
 import runClickable from "../recipes/runClickable.recipe";
 import { A } from "@solidjs/router";
 

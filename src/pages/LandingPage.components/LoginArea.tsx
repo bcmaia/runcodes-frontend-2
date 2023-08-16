@@ -2,10 +2,10 @@ import { css } from "../../../styled-system/css";
 import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes";
 import { divider } from "../../../styled-system/patterns";
-import { UserContext, useUserContext } from "../../App";
+import { UserContext } from "../../App";
 import { Accessor, Setter, createEffect, createSignal, useContext } from "solid-js";
 import { fetchUserData } from "../../services/auth";
-import { Navigate, useNavigate } from "@solidjs/router";
+import { useNavigate } from "@solidjs/router";
 
 const inputClass = css({
     p: "6px 12px",

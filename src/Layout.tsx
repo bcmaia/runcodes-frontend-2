@@ -1,5 +1,5 @@
 import { Outlet } from "@solidjs/router";
-import RunHeader from "./shared/RunHeader";
+import RunHeader from "./components/RunHeader";
 
 const Layout = () => {
     return (

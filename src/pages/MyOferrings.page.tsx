@@ -1,4 +1,4 @@
-import RunPanel from "../shared/RunPanel";
+import RunPanel from "../components/RunPanel";
 
 const MyOferrings = () => {
     return (

@@ -1,9 +1,33 @@
 import { defineTextStyles } from "@pandacss/dev";
 
 const textStyles = defineTextStyles({
-    bodyStrong: {
+    landingBody: {
         description:
-            "The body text style when contrast must be enhanced - used in paragraphs",
+            "Use this style in the landing page for paragraphs.",
+        value: {
+            fontFamily: "face-font",
+            fontWeight: "400",
+            fontSize: "14px",
+            lineHeight: "20px",
+            letterSpacing: "0",
+        },
+    },
+
+    landingSubTitle: {
+        description:
+            "Use this style in the landing page for sub titles.",
+        value: {
+            fontFamily: "face-font",
+            fontWeight: "500",
+            fontSize: "18px",
+            lineHeight: "1.5",
+            letterSpacing: "0",
+        },
+    },
+
+    landingBodyStrong: {
+        description:
+            "Use this style in the landing page for paragraphs when contrast is needed.",
         value: {
             fontFamily: "face-font",
             fontWeight: "700",
@@ -13,7 +37,7 @@ const textStyles = defineTextStyles({
         },
     },
 
-    lightTouch: {
+    landingLightTouch: {
         description: "Use this to convey a subtopic light idea.", // TODO: Improve this description
         value: {
             fontFamily: "face-font",

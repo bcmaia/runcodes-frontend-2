@@ -1,9 +1,7 @@
-import { createSignal } from 'solid-js';
 import { css } from '../../styled-system/css';
 import '../index.css';
-import RunModal from '../shared/FirstModal';
-import LoginArea from './LandingPage/LoginArea';
-import WelcomeArea from './LandingPage/WelcomeArea';
+import LoginArea from './LandingPage.components/LoginArea';
+import WelcomeArea from './LandingPage.components/WelcomeArea';
 
 const LandingPage = () => {
 

@@ -45,6 +45,15 @@ const techClickable = cva({
                     bgColor: 'rgb(255, 255, 255, 1)'
                 },
             },
+            gray: {
+                color: 'rgb(128, 128, 128, 1)', 
+                borderColor: 'rgb(128, 128, 128, 1)',
+                bgColor: 'rgb(128, 128, 128, 0)', 
+                _hover: {
+                    color: 'white', 
+                    bgColor: 'rgb(128, 128, 128, 1)'
+                },
+            },
         },
         width: {
             fit: {w: 'fit-content'},

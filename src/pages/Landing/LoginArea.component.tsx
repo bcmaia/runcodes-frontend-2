@@ -3,9 +3,16 @@ import techClickable from "../../recipes/techClickable.recipe";
 import { link } from "../../recipes/text-recipes.recipes";
 import { divider } from "../../../styled-system/patterns";
 import { UserContext } from "../../App";
-import { Accessor, Setter, createEffect, createSignal, useContext } from "solid-js";
+import {
+    Accessor,
+    Setter,
+    createEffect,
+    createSignal,
+    useContext,
+} from "solid-js";
 import { fetchUserData } from "../../services/auth";
 import { useNavigate } from "@solidjs/router";
+import ErrorMsgBox from "./ErrorMsgBox.component";
 
 const inputClass = css({
     p: "6px 12px",
@@ -71,17 +78,17 @@ const PasswordInput = (props: {
 
 const LoginForm = () => {
     // Signals
-    const [/* authErr */, setAuthErr] = createSignal(""); // TODO: Display error message
+    const [authErr, setAuthErr] = createSignal(""); // TODO: Display error message
     const [email, setEmail] = createSignal("");
     const [password, setPassword] = createSignal("");
 
     // Hooks
-    const userCtx = useContext(UserContext); 
+    const userCtx = useContext(UserContext);
     const navigate = useNavigate();
 
     // Effects
     createEffect(() => {
-        if (userCtx?.user?.isLoggedIn) navigate('/home');
+        if (userCtx?.user?.isLoggedIn) navigate("/home");
     });
 
     // Submit function
@@ -92,7 +99,8 @@ const LoginForm = () => {
 
         fetchUserData(email(), password())
             .then((userData) => {
-                if (undefined === userCtx) throw Error('User context is undefined');
+                if (undefined === userCtx)
+                    throw Error("User context is undefined");
                 userCtx?.setUser("userData", userData);
                 userCtx?.setUser("isLoggedIn", true);
             })
@@ -137,12 +145,16 @@ const LoginForm = () => {
                 Já estou cadastrado
             </h3>
 
+            <ErrorMsgBox show={"" !== authErr()}>
+                Você não confirmou o seu email
+            </ErrorMsgBox>
+
             <EmailInput email={email} setEmail={setEmail} />
 
             <PasswordInput password={password} setPassword={setPassword} />
 
             <button
-                type="submit"
+                type='submit'
                 class={techClickable({
                     color: "white",
                     weight: "extralight",
@@ -151,6 +163,22 @@ const LoginForm = () => {
             >
                 login
             </button>
+
+            <ErrorMsgBox show={"" !== authErr()} color='blue'>
+                Se você não recebeu seu email para confirmação do cadastro,
+                {' '}
+                <a
+                    class={css({
+                        color: "black",
+                        _hover: { textDecoration: "underline" },
+                    })}
+                >
+                    clique aqui
+                </a> 
+                {' '}
+                que enviaremos novamente. Caso você continue sem receber, envie
+                um email para support@run.codes
+            </ErrorMsgBox>
 
             <div
                 class={css({

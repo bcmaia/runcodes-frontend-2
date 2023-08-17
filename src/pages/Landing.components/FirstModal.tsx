@@ -6,7 +6,7 @@ import { Transition } from "solid-transition-group";
 //  using solidjs + pandacss, so, i made this mess, that, at least, gives us
 //  some animation.
 
-const BasicModal = (props: {
+const FirstModal = (props: {
     open: Accessor<boolean>;
     onClose: () => void;
     width?: any;
@@ -48,7 +48,7 @@ const BasicModal = (props: {
                         top: "0",
                         left: "0",
 
-                        backdropFilter: "blur(31'px)",
+                        backdropFilter: "blur(5px)",
                         bgColor: "rgba(0, 0, 0, 0.5)",
                         overflow: "scroll",
                     })}
@@ -75,4 +75,4 @@ const BasicModal = (props: {
     );
 };
 
-export default BasicModal;
+export default FirstModal;

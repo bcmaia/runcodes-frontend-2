@@ -1,6 +1,6 @@
 import { Accessor } from "solid-js";
 import { css } from "../../../styled-system/css";
-import FirstModal from "./FirstModal.component";
+import FirstModal from "../../components/modals/BasicModal.component";
 import { divider } from "../../../styled-system/patterns";
 import techClickable from "../../recipes/techClickable.recipe";
 
@@ -183,7 +183,7 @@ const TermsOfUse = (props: {
                 </button>
             </div>
 
-        </FirstModal>
+        </RunModal>
     );
 };
 

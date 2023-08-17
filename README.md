@@ -34,3 +34,16 @@ Your app is ready to be deployed!
 ## Deployment
 
 Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
+
+## TODO
+- Landing Page
+    - Implement 'Create acound'
+    - Implement did not receive confirmation email on auth error
+    - Implement Forgot Password
+    - Generalize modal
+- Home page
+    - Implement 'upcomming deadlines' functionality
+    - Implement 'my subjects' functionality
+    - Implement 'add subject' functionality
+    - Implement 'account' popup
+    - Implement clock functionality
